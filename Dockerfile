@@ -18,7 +18,7 @@ RUN cd client && npm install --legacy-peer-deps --loglevel=error
 COPY . .
 
 # Build do front-end com Vite - SEM definir VITE_API_URL para usar detecção automática
-RUN cd client && VITE_API_URL=http://formacao.ave-formacaoaws.com.br npm run build
+RUN cd client && VITE_API_URL=https://formacao.ave-formacaoaws.com.br npm run build
 
 # Limpeza das dependências de desenvolvimento do client para reduzir tamanho
 RUN cd client && npm prune --production && rm -rf node_modules/.cache
