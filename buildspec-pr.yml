@@ -17,4 +17,4 @@ phases:
       - VITE_API_URL=https://formacao.ave-formacaoaws.com.br npm run build
       - cd ..
       - echo Rodando testes unitários
-      - npm test
+      - npx jest tests/unit
