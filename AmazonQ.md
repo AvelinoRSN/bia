@@ -2,7 +2,7 @@
 
 ## Visão Geral do Projeto
 **Nome:** BIA  
-**Versão:** 3.2.0  
+**Versão:** 4.2.0  
 **Período do Bootcamp:** 28/07 a 03/08/2025 (Online e ao Vivo às 20h)  
 **Repositório:** https://github.com/henrylle/bia
 
