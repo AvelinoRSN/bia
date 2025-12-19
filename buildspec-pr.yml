@@ -8,7 +8,11 @@ phases:
       - sudo yum install -y nodejs
   build:
     commands:
+      - echo Instalando dependências da raiz
       - npm install --loglevel=error
-      - VITE_API_URL=https://formacao.ave-formacaoaws.com.br npm run build
+      - echo Navegando para o diretório client e instalando dependências
+      - cd client && npm install --loglevel=error
+      - echo Executando build do frontend
+      - cd client && VITE_API_URL=https://formacao.ave-formacaoaws.com.br npm run build
       - echo Rodando testes unitários
       - npm test
