@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing Node 21 e npm....
+      - curl -fsSL https://rpm.nodesource.com/setup_21.x | sudo bash -
+      - sudo yum install -y nodejs
+  build:
+    commands:
+      - echo Instalando dependências da raiz
+      - npm install --loglevel=error
+      - echo Navegando para o diretório client e instalando dependências
+      - cd client
+      - npm install --loglevel=error
+      - echo Executando build do frontend
+      - VITE_API_URL=https://formacao.ave-formacaoaws.com.br npm run build
+      - cd ..
+      - echo Rodando testes unitários
+      - npx jest tests/unit
