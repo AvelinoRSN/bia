@@ -33,7 +33,7 @@ describe('Versao Controller', () => {
   });
 
   test('get deve retornar a string de resposta correta quando VERSAO_API está definido', () => {
-    // Simula o cenário onde VERSAO_API está definido
+    // Simula o cenário onde VERSAO_API está definido corretamente
     process.env.VERSAO_API = '1.0.0';
 
     // Chama a função retornada pelo controller para obter o objeto controller
